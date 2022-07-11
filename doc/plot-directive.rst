@@ -1,8 +1,9 @@
 PyVista Plot Directive
 ----------------------
 You can generate static images of PyVista plots within sphinx using the
-``pyvista-plot`` directive by adding the following to your ``conf.py``
-when building your documentation using Sphinx.
+`pyvista-plot <https://docs.pyvista.org/extras/plot_directive.html>`_ directive
+by adding the following to your ``conf.py`` when building your documentation
+using Sphinx.
 
 .. code:: python
 
@@ -50,3 +51,9 @@ If you wish, you can also specify which function you want from that file with::
 Which is rendered as:
 
 .. pyvista-plot:: plot.py plot_function1
+
+
+Additional Information
+----------------------
+Read more about the PyVista plot directive at `pyvista-plot
+<https://docs.pyvista.org/extras/plot_directive.html>`_

@@ -1,5 +1,11 @@
 Using PyVista with Jupyter Execute
 ==================================
+
+.. note::
+   Be sure to read the main documentation page `PyVista - Jupyter
+   Notebook Plotting <https://docs.pyvista.org/user-guide/jupyter/index.html>`_
+   for more details about using PyVista with JupyterLab.
+
 PyVista also supports the `jupyter-sphinx
 <https://jupyter-sphinx.readthedocs.io/>`_ extension. With this extension you
 can execute code blocks within a sphinx ``*.rst`` file using the

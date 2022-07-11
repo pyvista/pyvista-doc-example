@@ -1,9 +1,10 @@
 PyVista Documentation Example
 -----------------------------
 
-This repository demonstrates how to use PyVista within Sphinx using both the 
+This repository demonstrates how to use PyVista within Sphinx using both the
 `sphinx-gallery <https://sphinx-gallery.github.io/>`_ and the PyVista plot
-directive ```pyvista-plot``.
+directive `pyvista-plot
+<https://docs.pyvista.org/extras/plot_directive.html>`_.
 
 
 Getting Started

@@ -70,6 +70,8 @@ templates_path = ["_templates"]
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
+html_logo = "./_static/pyvista_logo_sm.png"
+
 # Gallery Configuration ------------------------------------------------------
 
 from sphinx_gallery.sorting import FileNameSortKey
