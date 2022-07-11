@@ -1,32 +1,16 @@
-.. examples_sphinx documentation master file, created by
-   sphinx-quickstart on Sat Jun 25 06:36:57 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+PyVista - Example Documentation
+===============================
 
-Sphinx PyVista Plot Directive
-=============================
+.. toctree::
+   :maxdepth: 2
+   :hidden:
 
-.. pyvista-plot::
-   :caption: This is a default sphere
-   :include-source: True
+   plot-directive
+   jupyter-execute
+   gallery
 
-   >>> import pyvista
-   >>> pyvista.set_plot_theme("document")
-   >>> import pyvista
-   >>> sphere = pyvista.Sphere()
-   >>> out = sphere.plot()
 
-.. pyvista-plot::
+..
+   Reuse the root readme to avoid duplication.
 
-   >>> import pyvista
-   >>> sphere = pyvista.Sphere()
-   >>> out = sphere.plot()
-
-.. pyvista-plot:: plot.py
-
-.. pyvista-plot:: plot.py
-
-   The plot's caption.
-
-.. pyvista-plot:: plot.py plot_function1
-
+.. include:: ../README.rst

@@ -1,2 +1,6 @@
+jupyter-sphinx
+panel
+pydata-sphinx-theme
 pyvista
 sphinx
+sphinx-gallery

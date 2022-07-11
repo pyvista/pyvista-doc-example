@@ -2,3 +2,4 @@
 **/*.ipynb_checkpoints
 
 doc/source/images/auto-generated/*
+doc/_build/*
