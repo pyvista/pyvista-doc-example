@@ -7,7 +7,7 @@ PyVista - Example Documentation
 
    plot-directive
    jupyter-execute
-   gallery
+   gallery/index
 
 
 ..
