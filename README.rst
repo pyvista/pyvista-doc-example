@@ -6,6 +6,7 @@ This repository demonstrates how to use PyVista within Sphinx using both the
 directive `pyvista-plot
 <https://docs.pyvista.org/extras/plot_directive.html>`_.
 
+Visit rendered documentation at: https://pyvista.github.io/pyvista-doc-example/
 
 Getting Started
 ~~~~~~~~~~~~~~~
