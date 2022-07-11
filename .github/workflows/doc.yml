@@ -56,7 +56,7 @@ jobs:
         run: make -C doc html SPHINXOPTS="-W --keep-going"
 
       - name: Tar build
-        run: tar -zcvf doc-build.tar.gz doc/build/
+        run: tar -zcvf doc-build.tar.gz doc/_build/
 
       - uses: actions/upload-artifact@v3
         with:
