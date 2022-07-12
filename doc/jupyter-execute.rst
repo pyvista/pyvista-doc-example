@@ -27,14 +27,19 @@ Will be rendered as:
 
 Likewise, output from PyVista that would normally be rendered within a notebook
 will be rendered in the output cell from the ``jupyter-execute`` directive. For
-example, here's a plot using the `pythreejs
-<https://github.com/jupyter-widgets/pythreejs>`_ backend::
+example, here's a plot using the `panel <https://github.com/holoviz/panel>`_
+backend::
 
   .. jupyter-execute::
 
      from pyvista import examples
      dataset = examples.download_urn()
-     dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
+     dataset.plot(
+         color='tan',
+         jupyter_backend='panel',
+         smooth_shading=True,
+         window_size=[600, 400]
+     )
 
 Which is rendered as:
 
@@ -42,7 +47,12 @@ Which is rendered as:
 
    from pyvista import examples
    dataset = examples.download_urn()
-   dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
+   dataset.plot(
+       color='tan',
+       jupyter_backend='panel',
+       smooth_shading=True,
+       window_size=[600, 400]
+   )
 
 
 Using the ``Panel`` backend with PyVista
