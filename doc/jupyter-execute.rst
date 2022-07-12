@@ -131,12 +131,21 @@ Or you can first hide code that sets up the plotting backend and global theme::
        # onward will use the ``panel`` backend and do not have to be
        # specified in ``show``
        pv.set_jupyter_backend('panel')
+       pv.global_theme.background = 'white'
+       pv.global_theme.axes.show = False
+       pv.global_theme.smooth_shading = True
+       pv.global_theme.antialiasing = True
 
 .. jupyter-execute::
    :hide-code:
 
    import pyvista as pv
    pv.set_jupyter_backend('panel')
+   pv.global_theme.background = 'white'
+   pv.global_theme.axes.show = False
+   pv.global_theme.smooth_shading = True
+   pv.global_theme.antialiasing = True
+
 
 And now just directly execute ``plot`` on any dataset::
 
@@ -144,7 +153,7 @@ And now just directly execute ``plot`` on any dataset::
 
       from pyvista import examples
       dataset = examples.download_dragon()
-      dataset.plot(cpos="xy")
+      dataset.plot(cpos="xy", scalars=dataset.points[:, 2], cmap='bwr')
 
 Which looks like:
 
@@ -152,7 +161,7 @@ Which looks like:
 
    from pyvista import examples
    dataset = examples.download_dragon()
-   dataset.plot(cpos="xy")
+   dataset.plot(cpos="xy", scalars=dataset.points[:, 2], cmap='bwr')
 
 
 .. note::
