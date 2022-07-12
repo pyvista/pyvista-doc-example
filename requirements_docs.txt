@@ -2,7 +2,6 @@ jupyter-sphinx
 panel
 pydata-sphinx-theme
 pypandoc
-pythreejs
 pyvista
 sphinx
 sphinx-gallery
