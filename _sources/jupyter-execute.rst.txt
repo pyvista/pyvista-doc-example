@@ -27,14 +27,19 @@ Will be rendered as:
 
 Likewise, output from PyVista that would normally be rendered within a notebook
 will be rendered in the output cell from the ``jupyter-execute`` directive. For
-example, here's a plot using the `pythreejs
-<https://github.com/jupyter-widgets/pythreejs>`_ backend::
+example, here's a plot using the `panel <https://github.com/holoviz/panel>`_
+backend::
 
   .. jupyter-execute::
 
      from pyvista import examples
      dataset = examples.download_urn()
-     dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
+     dataset.plot(
+         color='tan',
+         jupyter_backend='panel',
+         smooth_shading=True,
+         window_size=[600, 400]
+     )
 
 Which is rendered as:
 
@@ -42,7 +47,12 @@ Which is rendered as:
 
    from pyvista import examples
    dataset = examples.download_urn()
-   dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
+   dataset.plot(
+       color='tan',
+       jupyter_backend='panel',
+       smooth_shading=True,
+       window_size=[600, 400]
+   )
 
 
 Using the ``Panel`` backend with PyVista
@@ -121,12 +131,21 @@ Or you can first hide code that sets up the plotting backend and global theme::
        # onward will use the ``panel`` backend and do not have to be
        # specified in ``show``
        pv.set_jupyter_backend('panel')
+       pv.global_theme.background = 'white'
+       pv.global_theme.axes.show = False
+       pv.global_theme.smooth_shading = True
+       pv.global_theme.antialiasing = True
 
 .. jupyter-execute::
    :hide-code:
 
    import pyvista as pv
    pv.set_jupyter_backend('panel')
+   pv.global_theme.background = 'white'
+   pv.global_theme.axes.show = False
+   pv.global_theme.smooth_shading = True
+   pv.global_theme.antialiasing = True
+
 
 And now just directly execute ``plot`` on any dataset::
 
@@ -134,7 +153,7 @@ And now just directly execute ``plot`` on any dataset::
 
       from pyvista import examples
       dataset = examples.download_dragon()
-      dataset.plot(cpos="xy")
+      dataset.plot(cpos="xy", scalars=dataset.points[:, 2], cmap='bwr')
 
 Which looks like:
 
@@ -142,7 +161,7 @@ Which looks like:
 
    from pyvista import examples
    dataset = examples.download_dragon()
-   dataset.plot(cpos="xy")
+   dataset.plot(cpos="xy", scalars=dataset.points[:, 2], cmap='bwr')
 
 
 .. note::
