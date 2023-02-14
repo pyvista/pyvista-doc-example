@@ -109,7 +109,25 @@ sphinx_gallery_conf = {
 #
 html_theme = "pydata_sphinx_theme"
 
+html_theme_options = {
+    # "navbar_persistent": ["search-field.html"],
+    # "logo": {
+    #     "image_light": "logo-light.png",
+    #     "image_dark": "logo-dark.png",
+    # }
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+def setup_searchbar(app, exception):
+    """"""
+    jquery_cdn_url = "https://cdn.jsdelivr.net/npm/docs-searchbar.js@2.4.1/dist/cdn/docs-searchbar.min.js"
+    # high priority, must be near the top of the preloads
+    app.add_js_file(jquery_cdn_url, priority=99)
+
+def setup(app):
+    app.setup_extension("sphinxcontrib.jquery")
+    app.connect('config-inited', setup_searchbar)

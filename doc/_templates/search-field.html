@@ -1,0 +1,22 @@
+
+<form class="bd-search d-flex align-items-center" action="{{ pathto('search') }}" method="get">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docs-searchbar.js@latest/dist/cdn/docs-searchbar.min.css"
+    />
+  </head>
+
+
+  <input type="search" id="search-bar-input" />
+  <script>
+    docsSearchBar({
+        hostUrl: 'http://localhost:7700',
+        apiKey: 'A1Qxly2sls6g1rb1sIKEVEtE7R1UsHad0VgqnvKhD5nhBNf5de',
+        indexUid: 'docs',
+        inputSelector: '#search-bar-input',
+        enableDarkMode: 'auto',
+        debug: true, // Set debug to true if you want to inspect the dropdown
+    })
+  </script>
+</form>

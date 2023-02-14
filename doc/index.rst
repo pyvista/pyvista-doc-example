@@ -6,7 +6,6 @@ PyVista - Example Documentation
    :hidden:
 
    plot-directive
-   jupyter-execute
    gallery/index
 
 
